@@ -1,19 +1,17 @@
-```markdown
-# ⚡ One Command, Strapi Live!  
+# ⚡ One Command, Strapi Live!
 
-Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your browser — Strapi magically appears!  
+Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your browser — Strapi magically appears!
 
 ## Repo Structure
 
-```
-
+```text
 .
 ├── modules/
-│   ├── ami/                 # Fetch latest Ubuntu AMI
-│   ├── ec2/                 # Launch EC2 instance
-│   ├── keypair/             # Generate SSH key pair
-│   ├── networking/          # VPC, subnet, IGW, route table
-│   └── security-group/      # Security group – Strapi ports
+│   ├── ami/             # Fetch latest Ubuntu AMI
+│   ├── ec2/             # Launch EC2 instance
+│   ├── keypair/         # Generate SSH key pair
+│   ├── networking/      # VPC, subnet, IGW, route table
+│   └── security-group/  # Security group – Strapi ports
 └── terraform/
     ├── main.tf
     ├── variables.tf
@@ -21,7 +19,7 @@ Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your br
     ├── provider.tf
     ├── terraform.tfvars
     ├── .terraform.lock.hcl
-    └── user_data.sh          # Cloud-init script – installs Strapi
+    └── user_data.sh     # Cloud-init script – installs Strapi
 ```
 
 ## How it Works
@@ -32,4 +30,3 @@ Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your br
 4. Access Strapi via instance URL in output.  
 
 🚀 Done! Your Strapi instance is live.
-```
