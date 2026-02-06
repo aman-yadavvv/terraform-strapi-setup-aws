@@ -1,6 +1,6 @@
-############################################
+
 # Load Balancer Security Group (Public)
-############################################
+
 
 resource "aws_security_group" "alb" {
   name        = "${var.name}-alb-sg"
@@ -25,10 +25,7 @@ resource "aws_vpc_security_group_egress_rule" "alb_out" {
   ip_protocol       = "-1" # Allows ALB to talk to instances
 }
 
-############################################
-# Instance Security Group (Private)
-############################################
-
+# Private Security Group for EC2 Instance #
 resource "aws_security_group" "instance" {
   name        = "${var.name}-instance-sg"
   description = "Private SG for Strapi EC2 instance"
@@ -41,7 +38,7 @@ resource "aws_security_group" "instance" {
 resource "aws_vpc_security_group_ingress_rule" "instance_from_alb" {
   security_group_id            = aws_security_group.instance.id
   description                  = "Allow traffic ONLY from ALB"
-  referenced_security_group_id = aws_security_group.alb.id # Restricts access
+  referenced_security_group_id = aws_security_group.alb.id 
   from_port                    = 80
   ip_protocol                  = "tcp"
   to_port                      = 80

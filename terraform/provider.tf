@@ -47,7 +47,7 @@ provider "aws" {
       Project     = "Strapi-Terraform-Assignment"
       Environment = "dev"
       ManagedBy   = "Terraform"
-      Owner       = "Rushi"
+      Owner       = "Aman"
     }
   }
 }
