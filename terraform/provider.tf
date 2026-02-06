@@ -1,6 +1,3 @@
-############################################
-# Terraform & Provider Configuration
-############################################
 terraform {
   required_version = ">= 1.6.0"
 
@@ -20,25 +17,7 @@ terraform {
       version = "~> 2.4"
     }
   }
-
-  ############################################
-  # Remote Backend (Recommended for production)
-  # Commented intentionally for assignment/demo
-  ############################################
-  /*
-  backend "s3" {
-    bucket         = "your-terraform-state-bucket"
-    key            = "strapi-ec2/terraform.tfstate"
-    region         = "ap-south-1"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock"
-  }
-  */
 }
-
-############################################
-# AWS Provider
-############################################
 provider "aws" {
   region = var.aws_region
 
