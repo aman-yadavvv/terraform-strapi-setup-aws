@@ -31,3 +31,12 @@ Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your br
 4. Access Strapi via Load Balancer URL in output.  
 
 🚀 Done! Your Strapi instance is live.
+
+![terraform apply 1](./images/terraform_apply_1.PNG)
+![terraform apply 2](./images/terraform_apply_2.PNG)
+![terraform apply 3](./images/terraform_apply_3.PNG)
+![aws 1](./images/aws_1.PNG)
+![strapi](./images/strapi.PNG)
+![strapi 2](./images/strapi_2.PNG)
+![user data 1](./images/user_data_1.PNG)
+![user data 2](./images/user_data_2.PNG)
