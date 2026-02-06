@@ -21,6 +21,8 @@
 ```
 
 
+loom :- https://www.loom.com/share/8353d560e011401ca44161f2a17dee0d
+
 Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your browser — Strapi will appears!
 
 
